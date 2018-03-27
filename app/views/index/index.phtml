@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div id="title" class="orange-text">Feedback</div>
+
+<!--  INÍCIO DO BLOCO DE RECADOS (FEEDBACK)  -->
+    <?php
+    $feeds = new Index();
+    $feedbacks = $feeds->listFeedback();
+    if (empty($feedbacks)):
+
+        echo "<div class='orange-text darken-1 center' style='margin-left: 1rem; margin-top: 3rem; font-size: 1.5rem;'>
+                Não há feedbacks para serem exibidos!
+        </div>";
+
+    else:
+    echo "<div class='row'>";
+        foreach ($feedbacks as $feedback){
+            $data = explode('-',$feedback->created_at);
+            $data2 = explode(' ',$data[2]);
+            $dataCad = $data2[0] .'/'. $data[1] .'/'. $data[0];
+            ?>
+
+        <div class="col s12 m6 l6">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">
+                        De: <span class="orange-text"><?php echo $feedback->of_user; ?></span>
+                        Para: <span class="orange-text"><?php echo $feedback->for_user; ?></span>
+                    </span>
+                    <p><?php echo $feedback->message; ?></p>
+                </div>
+            <div class="card-action center">
+                <a>Em: <?php echo utf8_encode($dataCad .' - ' . $data2[1]); ?></a>
+<!--                <a href="#">This is a link</a>-->
+            </div>
+            </div>
+        </div>
+
+   <?php   }
+    endif;
+    ?>
+</div>
+<!--   FIM DO BLOCO DE RECADOS (FEEDBACK)  -->
+</div>
+
+

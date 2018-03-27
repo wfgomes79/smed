@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SMED : : infoIP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--inclusão dos arquivos css-->
+        <link href='/web_files/materialize/css/materialize.min.css' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='/web_files/jquery/css/jquery-ui.min.css' rel='stylesheet' type='text/css' />
+
+        <style>
+            #footer
+            {
+                width:100%;
+                position:fixed;
+                bottom:0px;
+                left:0px;
+                font-size: small;
+                border-top: 0.1rem solid orange;
+            }
+
+            #title
+            {
+                margin-top: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                border-bottom: 0.3rem solid coral;
+                font-size: 1.5rem;
+            }
+
+            .container-fluid
+            {
+                margin-bottom: 1.5rem;
+            }
+
+            #itemNav:hover
+            {
+                border-top: 0.4rem solid orange;
+            }
+
+        </style>
+    </head>
+        <body onLoad="putFocus(0,0);">
+
+        <div class="navbar-fixed">
+
+            <nav class="blue darken-2 nav-wrapper">
+                <span class="brand-logo right">
+                    <span>
+                        <span class="white-text">info</span>
+                        <span class="orange-text"><b>IP</b></span>
+                    </span>
+                </span>
+
+                <a href="#" data-activates="mobile" class="button-collapse left">
+                    <i class="material-icons">
+                        <span class="">menu</span>
+                    </i>
+                </a>
+
+                <ul class="hide-on-med-and-down">
+                    <li><a id="itemNav" href="/index" class="waves-effect"><i class="material-icons left">home</i>Home</a></li>
+                    <li><a id="itemNav" href="/search" class="waves-effect"><i class="material-icons left">search</i>Buscar Unidade</a></li>
+                    <li><a id="itemNav" href="/feedback" class="waves-effect"><i class="material-icons left">edit</i>Feedback</a></li>
+                    <li><a id="itemNav" href="/reports" class="waves-effect"><i class="material-icons left">content_paste</i>Relatórios</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <ul class="side-nav left-align white lighten-1" id="mobile">
+            <li><a href="/index" class="waves-effect blue-grey-text"><i class="material-icons blue-grey-text left">home</i>Home</a></li>
+            <li class="divider"></li>
+            <li><a href="/search" class="waves-effect blue-grey-text"><i class="material-icons blue-grey-text left">search</i>Buscar Unidade</a></li>
+            <li class="divider"></li>
+            <li><a href="/feedback" class="waves-effect blue-grey-text"><i class="material-icons blue-grey-text left">edit</i>Cadastrar/Excluir Feedback</a></li>
+            <li class="divider"></li>
+            <li><a href="/reports" class="waves-effect blue-grey-text"><i class="material-icons blue-grey-text left">content_paste</i>Relatórios</a></li>
+            <li class="divider"></li>
+        </ul>
+
+

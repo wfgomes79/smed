@@ -1,0 +1,44 @@
+<div id="footer" class="blue darken-2">
+        <div class="container grey-text">
+            © 2018 infoIP - NTI Suporte
+            <span class="grey-text right">infoIP v1.1.0</span>
+        </div>
+
+</div>
+<!--inclusão dos arquivos javascript-->
+<script src='/web_files/jquery/js/jquery.js'></script>
+
+<script src='/web_files/jquery/js/jquery-ui.min.js'></script>
+<script src='/web_files/materialize/js/materialize.min.js'></script>
+
+<script type="text/javascript">
+
+    $('#escola').ready(function() {
+
+        $.getJSON('Json.php', function(data){
+            var escolaArray = [];
+
+            $(data).each(function(key, value) {
+                escolaArray.push(value.escola);
+            });
+
+            $('#escola').autocomplete({ source: escolaArray, minLength: 3});
+        });
+    });
+
+    <!-- init focus -->
+    function putFocus(formInst, elementInst) {
+        if (document.forms.length > 0) {
+            document.forms[formInst].elements[elementInst].focus();
+        }
+    };
+    <!-- end focus -->
+
+    $(".button-collapse").sideNav();
+
+
+</script>
+
+        </div>
+    </body>
+</html>

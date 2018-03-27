@@ -1,0 +1,28 @@
+﻿Tipo: Framework MVC
+Padrão: Table Data Gateway
+
+/*
+ * 1 - Por questão de organização, crie dentro do diretório views,
+ * um subdiretório com o nome do controller para armazenar os arquivos de visualização .phtml
+ *
+ * 2 - Envie variáveis para a view através de um array, onde será solicitado quando instanciar a view
+ * Ex.: $this->>view('nome-da_view_que_sera_chamada','nome_da_pasta_do_controler', $variavel_com_array_dos_dados)
+ * 3 - As variáveis que serão capturadas na view terá sempre o prefixo (view_) seguido do nome do índice
+ * ex.:  se a variável com o array for definida como $dados['nome_do_indice'], será recebida na view como $view_nome_do_indice
+ * ou também através da variável definida no controller (pai) $vars['nome_do_indice']
+ * 4 - de acordo com o padrão GET DATA GATEWAY será utilizada uma tabela por model ,esta deve ser definida dentro
+ * classe do model através da variável $_table
+
+
+          AJUDAS
+
+          * helpers
+          * $email = new EmailHelper();
+          * echo $email->sendMail();
+          */
+
+         /*
+          * enviando parametros para a view através de um array
+          * $dados = $this->_params;
+          * $this->view('index','index' , $dados);
+          */
