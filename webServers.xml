@@ -1,0 +1,14 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b438fda7-b0cf-4833-a78b-562a3c6ac950" name="yii" url="http://webserver/new">
+        <fileTransfer host="webserver" port="22" rootFolder="/var/www/html/new" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</application>
